@@ -23,14 +23,6 @@ function Header({ currentPage, setCurrentPage, isAdmin, isUser, username, onLogo
           >
             {isUser ? 'Book Session' : 'Sign In'}
           </button>
-          {!isUser && (
-            <button
-              className={`nav-btn ${currentPage === 'view' ? 'active' : ''}`}
-              onClick={() => setCurrentPage('view')}
-            >
-              View Bookings
-            </button>
-          )}
           {isUser && (
             <button
               className={`nav-btn ${currentPage === 'account' ? 'active' : ''}`}
